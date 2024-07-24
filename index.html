@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GauriBhardwaj- Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden font-Outfit leading-8 dark:bg-darkTheme dark:text-white">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]
+    dark:hidden">
+        <img src="./assets/header-bg.png" alt="" class="w-full">
+    </div>
+
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+
+        <img src="./assets/logoBlack.png" alt="Logo"
+        class="w-28 cursor-pointer mr-14 dark:hidden">
+
+        <img src="./assets/logoWhite.png" alt="Logo"
+        class="w-28 cursor-pointer mr-14 hidden dark:block">
+
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo
+        dark:border dark:border-white/50 dark:bg-transparent ">
+            <li><a href="#">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#work">Projects</a></li>
+            <li><a href="#exp">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+        <!-- <button onclick="toggleTheme()">
+            <img src="./assets/moon.png" alt="" class="w-6 dark:hidden">
+            <img src="./assets/sun.png" alt="" class="w-6 hidden dark:block">
+        </button> -->
+
+        <a id="dropdown-button" href="#" 
+        class="hidden select-none lg:flex items-center gap-3 px-5 py-2.5 border border-gray-500 rounded-full ml-2 hover:bg-gray-50" onclick="toggleDropdown()">
+        Socials 
+        <img src="./assets/arrowDown.png" alt="" class="w-3 dark:hidden">
+        <img src="./assets/arrowDown-white.png" alt="" class="w-3 hidden dark:block">
+        </a>
+        <div id="dropdown-menu" class="hidden absolute right-24 w-1020 border border-gray-300 bg-white shadow-md mt-48 rounded-full">
+            <div class="py-4 px-4 cursor-pointer hover:bg-gray-100 rounded-full"><a target="_blank" href="https://github.com/gauribhardwajj"><img src="./assets/github.png" class="w-6"></a></div>
+            <div class="py-4 px-4 cursor-pointer hover:bg-gray-100"><a target="_blank" href="https://www.linkedin.com/in/gauriibhardwajj/"><img src="./assets/linkedin.png" class="w-6"></a></div>
+            <div class="py-4 px-4 cursor-pointer hover:bg-gray-100 rounded-full"><a target="_blank" href="https://leetcode.com/u/gauri_bhardwaj/"><img src="./assets/leet.png" class="w-7"></a></div>
+        </div>
+
+        <button class="block md:hidden ml-3" onclick="openMenu()">
+            <img src="./assets/hamBlack.png" alt="" class="w-6 dark:hidden">
+            <img src="./assets/hanWhite.png" alt="" class="w-6 hidden dark:block">
+        </button>
+
+        </div>
+<!-- ----- mobile menu ------  -->
+        <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white">
+
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="./assets/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden">
+
+                <img src="./assets/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block">
+            </div>
+
+            <li><a href="#" onclick="closeMenu()">Home</a></li>
+            <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+            <li><a href="#work" onclick="closeMenu()">Projects</a></li>
+            <li><a href="#exp" onclick="closeMenu()">Timeline</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+    
+</nav>
+
+<!-- ------ header --------------  -->
+
+<div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 pt-32">
+    <img src="./assets/profilePhoto.png" alt="" class="rounded-full w-32">
+    <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
+        Hi! I'm Gauri Bhardwaj <img sr/hand-icon.png" alt="" class="w-6"></h3>
+    <h1 class="text-2xl sm:text-5xl l:text-[56px] font-Ovo">Aspiring Software Developer Based in India.</h1>
+    <p class="max-w-2xl mx-auto font-Ovo"> I am a post-graduate MCA student, passionate about software engineering. As a fresher, I bring a strong foundation in programming, problem-solving, and a keen interest in developing innovative solutions. Explore my projects and skills to see how I can contribute to your team.</p>
+
+    <div class="flex flex-col sm:flex-row items-center gap-4 mt-4 mb-10">
+        <a href="#contact"
+        class="px-8 py-2 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent">
+        Connect with me <img src="./assets/right-arrow-white.png" alt="" class="w-4"></a>
+        <a href="./assets/GauriBhardwaj-Resume.pdf" download
+        class="px-8 py-2 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black hover:bg-gray-100">
+        Download Resume <img src="./assets/downloadBlack.png" alt="" class="w-4"></a>
+    </div>
+</div>
+
+<div class="h-4 w-full">
+
+</div>
+
+<div id="skills" class="flex items-center sm:top-20 justify-center flex-col bg-gray-100 pt-10 pb-10 scroll-mt-40">
+    <h1 class="font-medium mb-10 text-xl sm:text-7xl lg:text-[50px]">Skills</h1>
+    <div>
+        <div class="flex flex-wrap justify-center mt-4">
+            <!-- Repeat this block for each technology -->
+            <span class="h-28 w-28 bg-white shadow-xl ml-2 rounded-full flex justify-center items-center p-5 m-2 animate-bounce">
+                <img loading="lazy" src="./assets/html.png" class="h-full w-full object-cover rounded-full">
+            </span>
+            <span class="h-28 w-28 bg-white shadow-xl ml-2 rounded-full flex justify-center items-center p-5 m-2 animate-bounce">
+                <img loading="lazy" src="./assets/js.png" class="h-full w-full object-cover rounded-full">
+            </span>
+            <span class="h-28 w-28 bg-white shadow-xl ml-2 rounded-full flex justify-center items-center p-5 m-2 animate-bounce">
+                <img loading="lazy" src="./assets/react.png" class="h-full w-full object-cover rounded-full">
+            </span>
+            <span class="h-28 w-28 bg-white shadow-xl ml-2 rounded-full flex justify-center items-center p-5 m-2 animate-bounce">
+                <img loading="lazy" src="./assets/tailwind.png" class="h-full w-full object-cover rounded-full">
+            </span>
+            <span class="h-28 w-28 bg-white shadow-xl ml-2 rounded-full flex justify-center items-center p-5 m-2 animate-bounce">
+                <img loading="lazy" src="./assets/node.png" class="h-full w-full object-cover rounded-full">
+            </span>
+            <span class="h-28 w-28 bg-white shadow-xl ml-2 rounded-full flex justify-center items-center p-5 m-2 animate-bounce">
+                <img loading="lazy" src="./assets/cpp.png" class="h-full w-full object-cover rounded-full">
+            </span>
+            <span class="h-28 w-28 bg-white shadow-xl ml-2 rounded-full flex justify-center items-center p-5 m-2 animate-bounce">
+                <img loading="lazy" src="./assets/pyhton.png" class="h-full w-full object-cover rounded-full">
+            </span>
+            <span class="h-28 w-28 bg-white shadow-xl ml-2 rounded-full flex justify-center items-center p-5 m-2 animate-bounce">
+                <img loading="lazy" src="./assets/sql.png" class="h-full w-full object-cover rounded-full">
+            </span>
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+</div>
+
+<!-- ------------ my work ------------  -->
+
+<div id="work" class="w-full px-[12%] py-10 scroll-mt-40">
+    <h2 class="text-center text-5xl font-Ovo">My latest work</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">Welcome to my project section! Explore a collection of projects showcasing my expertise in Data Structure and Algorithms, Data Science, Machine Learning and Web Development.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-10 gap-10 dark:text-black">
+        <div class="aspect-square bg-[url('./assets/bigint.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+            <a target="_blank" href="https://github.com/gauribhardwajj/BigInt-Library-Cpp">
+            <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                <div>
+                    <h2 class="font-semibold">BigInt Library</h2>
+                    <p class="text-sm text-gray-700">DSA using C++</p>
+                </div>
+                <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                    <img src="./assets/github.png" alt="" class="w-5">
+                </div>
+            </div>
+        </a>
+        </div>
+        <div class="aspect-square bg-[url('./assets/churn.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+            <a target="_blank" href="https://github.com/gauribhardwajj/Telecom-Churn-Prediction">
+            <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                <div>
+                    <h2 class="font-semibold">Churn Prediction</h2>
+                    <p class="text-sm text-gray-700">Machine Learning</p>
+                </div>
+                <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                    <img src="./assets/github.png" alt="" class="w-5">
+                </div>
+            </div>
+            </a>
+        </div>
+
+        <div class="aspect-square bg-[url('./assets/cpu.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+            <a target="_blank" href="https://github.com/gauribhardwajj/CPU-Scheduling-Algorithms">
+            <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                <div>
+                    <h2 class="font-semibold">CPU Scheduling</h2>
+                    <p class="text-sm text-gray-700">Operating Systems</p>
+                </div>
+                <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                    <img src="./assets/github.png" alt="" class="w-5">
+                </div>
+            </div>
+        </a>
+        </div>
+        
+        <div class="aspect-square bg-[url('./assets/fest.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+            <a target="_blank" href="https://www.taarangana.in/">
+            <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                <div>
+                    <h2 class="font-semibold">Taarangana</h2>
+                    <p class="text-sm text-gray-700">Web Development</p>
+                </div>
+                <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                    <img src="./assets/link.png" alt="" class="w-5">
+                </div>
+            </div>
+        </a>
+        </div>
+        <div class="aspect-square bg-[url('./assets/bank.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+            <a target="_blank" href="https://github.com/gauribhardwajj/Simple-Banking-System">
+            <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                <div>
+                    <h2 class="font-semibold">Banking System</h2>
+                    <p class="text-sm text-gray-700">React.js</p>
+                </div>
+                <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                    <img src="./assets/github.png" alt="" class="w-5">
+                </div>
+            </div>
+        </a>
+        </div>
+        <div class="aspect-square bg-[url('./assets/supply.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+            <a target="_blank" href="https://github.com/gauribhardwajj/Multiple-Analysis-on-Supply-Chain-Management">
+            <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                <div>
+                    <h2 class="font-semibold">Supply Analysis</h2>
+                    <p class="text-sm text-gray-700">Data Visualization</p>
+                </div>
+                <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                    <img src="./assets/github.png" alt="" class="w-5">
+                </div>
+            </div>
+        </a>
+        </div>
+
+</div>
+
+<!-- Experience -->
+<div id="exp" class="py-20 scroll-mt-32">
+<h2 class="text-center text-5xl font-Ovo">Work Experience</h2>
+<p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">Internships, Trainings and infinite learnings!</p>
+
+<div class="relative container mx-auto px-1 flex flex-col space-y-8 space-y-10">
+    <!-- Adjust the line to be on the left -->
+    <div class="absolute z-0 w-2 bg-gray-200 shadow-lg inset-0 left-4"></div>
+    <!-- First item -->
+    <div class="relative z-10 flex items-start space-x-4 md:space-x-8">
+        <div class="relative">
+            <div class="absolute left-0 top-5 transform -translate-x-1/2 h-14 w-14 rounded-full" style="left: 16px;" aria-hidden="true"><img src="./assets/infosys.png" class="rounded-full"></div>
+            <div class="bg-white p-4 rounded-md shadow-lg ml-14">
+                <span class="font-bold text-[#da7d20] text-sm tracking-wide">Infosys Springboard (May 2024 - Jul 2024)</span>
+                <h1 class="text-xl font-bold pt-1">Data Science Project Intern</h1>
+                <p class="pt-1">
+                    Applied advanced data analysis techniques and machine learning algorithms using Python to predict "Customer Churn Rate" indentifying key drivers through in-depth analysis.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Second item -->
+    <div class="relative z-10 flex items-start space-x-4 md:space-x-8">
+        <div class="relative">
+            <div class="absolute left-0 top-5 transform -translate-x-1/2 h-14 w-14 rounded-full" style="left: 16px;" aria-hidden="true"><img src="./assets/tsf.png" class="rounded-full"></div>
+            <div class="bg-white p-4 rounded-md shadow-lg ml-14">
+                <span class="font-bold text-[#da7d20] text-sm tracking-wide">The Sparks Foundation (Jan 2024 - Feb 2024)</span>
+                <h1 class="text-2xl font-bold pt-1">Web Development and Design Intern</h1>
+                <p class="pt-1">
+                    Developed websites including a Simple Banking System using HTML, CSS, React.js and Tailwind CSS while ensuring optimal user experience through responsiveness.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Third item -->
+    <div class="relative z-10 flex items-start space-x-4 md:space-x-8">
+        <div class="relative">
+            <div class="absolute left-0 top-5 transform -translate-x-1/2 h-14 w-14 rounded-full" style="left: 16px;" aria-hidden="true"><img src="./assets/ict.png" alt="" class="rounded-full"></div>
+            <div class="bg-white p-4 rounded-md shadow-lg ml-14">
+                <span class="font-bold text-[#da7d20] text-sm tracking-wide">ICT Academy (Feb 2023 - Mar 2023)</span>
+                <h1 class="text-2xl font-bold pt-1">Data Analyst Trainee</h1>
+                <p class="pt-1">
+                    Successfully completed the course on Microsoft Data Analyst Associate (DA-100) under HoneyWell Student Empowerment Program at Indraprastha College for Women, University of Delhi.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+<!-- ----- contact -------------  -->
+ <div id="contact" class="w-full px-[12%] py-10 scroll-mt-40 bg-no-repeat bg-[length:90%_auto] bg-center
+ dark:bg-none">
+ <h2 class="text-center text-5xl font-Ovo">Get in Touch</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I'd love to hear from you! <br/>If you have any questions, comments or feedback, please use the form below.</p>
+
+    <form method="POST" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
+
+<!------- Enter your web3 form access key below ------------>
+
+        <input type="hidden" name="access_key" value="------Enter web3form access key----">
+
+        <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
+            <input type="text" placeholder="Enter your name" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required name="name">
+
+            <input type="email" placeholder="Enter your email" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required name="email">
+        </div>
+        <textarea rows="3" placeholder="Enter your message" class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90" required name="message"></textarea>
+
+        <button class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] hover:bg-gradient-to-r from-[#b820e6] to-[#da7d20] ">Send now
+            <img <img src="./assets/right-arrow-white.png" alt="" class="w-4">
+        </button
+    </form>
+ </div>
+
+
+
+<!-- ----------- footer ---------  -->
+ <div class="mt-5">
+    <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+        <p class="w-max flex items-center gap-2 lg:mx-0 md:mx-auto sm:mx-auto">
+            <img src="./assets/mailblack.png" alt="" class="w-5 dark:hidden">
+            <img src="./assets/mailwhite.png alt="" class="w-5 hidden dark:block">
+            <a href="https://mailto:gauriebhardwaj@gmail.com">gauriebhardwaj@gmail.com</a> 
+        </p>
+        <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+            <li><a target="_blank" href="https://github.com/gauribhardwajj">GitHub</a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/gauriibhardwajj/">LinkedIn</a></li>
+            <li><a target="_blank" href="https://leetcode.com/u/gauri_bhardwaj/">Leetcode</a></li>
+        </ul>
+    </div>
+ </div>
+
+<script src="./script.js"></script>
+</body>
+</html>
