@@ -12,9 +12,7 @@ tailwind.config = {
             spin_slow: 'spin 6s linear infinite'
         },
         colors:{
-            lightHover: '#fcf4ff',
-            darkHover: '#2a004a',
-            darkTheme: '#11001F'
+            lightHover: '#fcf4ff'
         },
         boxShadow:{
             'black': '4px 4px 0 #000',
@@ -22,5 +20,4 @@ tailwind.config = {
         } 
     }
 },
-      darkMode: 'selector'  
 }
